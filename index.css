@@ -1,0 +1,113 @@
+:root {
+    font-size: 16px;
+}
+
+body{
+        margin: 0;
+        padding: 0;
+        background-image: url("image-3.jpg");
+}
+.window {
+    display: flex;
+    flex-direction: column; 
+    padding: 10vmax;
+    padding-top: 5vw;
+    color: whitesmoke;
+}
+
+
+.hobbies,technologies,professionalexp,webprojects{
+
+    margin-top: 1vw;
+    border: 0px;
+    padding: 1vw;
+}
+
+
+.section{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    box-shadow: 0 3px 20px 0 red;
+    background: linear-gradient( rgb(219, 116, 78), rgb(206, 67, 67)); 
+    padding: 3vw;
+}
+li,p{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2{
+        font: 'Cinzel',serif bold 2vmax Roboto;
+        text-transform: uppercase;
+        transition: box-shadow 0.3s linear 0.1s;
+}
+
+
+h2:hover {
+    font-family: 'Roboto:300i', sans-serif;
+    cursor: pointer;
+    color: khaki;
+    box-shadow: 0 3px 20px 0 #35eea4; 
+    text-align: right;
+}
+
+li::first-letter {
+ font-weight: 800;
+ font-size: 2vm;
+} 
+
+
+@media screen and (max-width: 725px) {
+    .section {
+        flex-direction: column;
+    }
+    .section .image {
+        order: 2;
+    }
+    .section .my-image {
+        width: 60vw;
+    }
+    h1{
+        font-size: 6vw;
+    }
+    .window {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 725px) {
+    .section {
+        flex-direction: column;
+    }
+    .section .image {
+        order: 2;
+    }
+    .section .my-image {
+        width: 50vw;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .window {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .section {
+        flex-direction: column;
+    }
+    .section .image {
+        order: 2;
+    }
+    .section .my-image {
+        width: 40vw;
+    }
+    h1{
+        font-size: 15px;
+    }
+    .window {
+        font-size: 15px;
+    }
+}
